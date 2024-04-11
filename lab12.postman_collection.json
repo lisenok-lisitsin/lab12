@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "ece49016-85a3-4785-b2b6-dbccc52637dd",
+		"name": "lab12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34214604",
+		"_collection_link": "https://www.postman.com/lisitsin/workspace/my-workspace/collection/34214604-ece49016-85a3-4785-b2b6-dbccc52637dd?action=share&source=collection_link&creator=34214604"
+	},
+	"item": [
+		{
+			"name": "BasicDefs",
+			"item": [
+				{
+					"name": "Plus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(a+b);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/+/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"+",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Minus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(a-b);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/-/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"-",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Div",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(a/b);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/|/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"|",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mult",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(a*b);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/*/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"*",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mod",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(a%b);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/mod/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"mod",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Int",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(Math.floor(a/b));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sav4.pythonanywhere.com/simath/{{a}}/||/{{b}}",
+							"protocol": "http",
+							"host": [
+								"sav4",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"simath",
+								"{{a}}",
+								"||",
+								"{{b}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HardMath",
+			"item": [
+				{
+					"name": "Degrees",
+					"item": [
+						{
+							"name": "Sin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"function rad (angle) {\r",
+											"  return angle * (Math.PI / 180);\r",
+											"}\r",
+											"\r",
+											"let arg = rad(pm.collectionVariables.get(\"a\"));\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.sin(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/sin/{{a}}/0/degrees",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"sin",
+										"{{a}}",
+										"0",
+										"degrees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"function rad (angle) {\r",
+											"  return angle * (Math.PI / 180);\r",
+											"}\r",
+											"\r",
+											"let arg = rad(pm.collectionVariables.get(\"a\"));\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.cos(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/cos/{{a}}/0/degrees",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"cos",
+										"{{a}}",
+										"0",
+										"degrees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tan",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"function rad (angle) {\r",
+											"  return angle * (Math.PI / 180);\r",
+											"}\r",
+											"\r",
+											"let arg = rad(pm.collectionVariables.get(\"a\"));\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.tan(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/tan/{{a}}/0/degrees",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"tan",
+										"{{a}}",
+										"0",
+										"degrees"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rads",
+					"item": [
+						{
+							"name": "Sin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let arg = pm.collectionVariables.get(\"a\");\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.sin(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/sin/{{a}}/0/rads",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"sin",
+										"{{a}}",
+										"0",
+										"rads"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let arg = pm.collectionVariables.get(\"a\");\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.cos(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/cos/{{a}}/0/rads",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"cos",
+										"{{a}}",
+										"0",
+										"rads"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tan",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let arg = pm.collectionVariables.get(\"a\");\r",
+											"let dt = 0.0001;\r",
+											"let response = Number(pm.response.text());\r",
+											"let test_result = Math.tan(arg);\r",
+											"let test = String(Math.abs(test_result - response) < dt);\r",
+											"pm.test(\"Difference is too big\", function () {\r",
+											"    pm.expect(test).to.include(\"true\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://sav4.pythonanywhere.com/hamath/tan/{{a}}/0/rads",
+									"protocol": "http",
+									"host": [
+										"sav4",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"hamath",
+										"tan",
+										"{{a}}",
+										"0",
+										"rads"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pow",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = Number(pm.collectionVariables.get(\"a\"));\r",
+									"let b = Number(pm.collectionVariables.get(\"b\"));\r",
+									"let test = Math.pow(a,b);\r",
+									"pm.test(\"All working\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(test);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{link}}/hamath/pow/{{a}}/{{b}}/{{anything}}",
+							"host": [
+								"{{link}}"
+							],
+							"path": [
+								"hamath",
+								"pow",
+								"{{a}}",
+								"{{b}}",
+								"{{anything}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sqrt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let a = pm.collectionVariables.get(\"a\");\r",
+									"let dt = 0.0001;\r",
+									"let response = Number(pm.response.text());\r",
+									"let test_result = Math.sqrt(a);\r",
+									"let test = String(Math.abs(test_result - response) < dt);\r",
+									"pm.test(\"Difference is too big\", function () {\r",
+									"    pm.expect(test).to.include(\"true\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{link}}/hamath/root/{{a}}/0/{{anything}}",
+							"host": [
+								"{{link}}"
+							],
+							"path": [
+								"hamath",
+								"root",
+								"{{a}}",
+								"0",
+								"{{anything}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "a",
+			"value": "5",
+			"type": "string"
+		},
+		{
+			"key": "b",
+			"value": "5",
+			"type": "string"
+		},
+		{
+			"key": "anything",
+			"value": "rads",
+			"type": "string"
+		},
+		{
+			"key": "link",
+			"value": "http://sav4.pythonanywhere.com",
+			"type": "string"
+		}
+	]
+}
